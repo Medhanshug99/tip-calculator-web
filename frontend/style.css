@@ -1,0 +1,196 @@
+:root {
+  --bg: #0b0f1a;
+  --card: #141a2f;
+  --accent: #f97316;
+  --accent-2: #6366f1;
+  --muted: #9ca3af;
+  --white: #f8fafc;
+  --danger: #ef4444;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(400px 400px at 20% 10%, rgba(249,115,22,0.18), transparent),
+    radial-gradient(400px 400px at 80% 80%, rgba(99,102,241,0.18), transparent),
+    #0b0f1a;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+}
+
+.card {
+  width: min(880px, 100%);
+  background: var(--card);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 820px) {
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.controls input {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: none;
+  background: #0b0f1a;
+  color: var(--white);
+  font-size: 15px;
+  outline: 2px solid transparent;
+}
+
+.controls input:focus {
+  outline-color: var(--accent);
+}
+
+.tip-buttons .buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;      
+}
+
+
+.tipBtn {
+  min-width: 90px;         
+  padding: 12px 0;
+  border-radius: 16px;
+  border: none;
+  background: #0b0f1a;
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.tipBtn:not(.inactive) {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+.tip-buttons input {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: none;
+  background: #0b0f1a;
+  color: var(--white);
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px 0;
+  border-radius: 18px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: #0b0f1a;
+  color: var(--muted);
+}
+
+.results {
+  background: rgba(255,255,255,0.03);
+  border-radius: 22px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.value {
+  font-family: ui-monospace, monospace;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.result-row.total {
+  margin-top: 6px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.result-row.total .value {
+  color: #fde68a;
+}
+
+.error {
+  font-size: 13px;
+  color: var(--danger);
+  min-height: 18px;
+}
