@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <header>
+      <div class="logo">TC</div>
+      <div>
+        <h1 id="title">Tip Calculator</h1>
+      </div>
+    </header>
+
+    <section class="calc-grid">
+      <form id="tipForm" class="controls" novalidate>
+        <label>
+          Bill amount
+          <input id="bill" type="number" min="0" step="0.01" placeholder="0.00" inputmode="decimal" required>
+        </label>
+
+        <fieldset class="tip-buttons" aria-label="Tip percentage">
+          <legend>Select Tip %</legend>
+          <div class="buttons">
+            <button type="button" class="tipBtn" data-tip="5">5%</button>
+            <button type="button" class="tipBtn" data-tip="10">10%</button>
+            <button type="button" class="tipBtn" data-tip="15">15%</button>
+            <button type="button" class="tipBtn" data-tip="25">25%</button>
+            <button type="button" class="tipBtn" data-tip="50">50%</button>
+            <input id="customTip" type="number" min="0" step="1" placeholder="Custom" inputmode="numeric">
+          </div>
+        </fieldset>
+
+        <label>
+          Number of people
+          <input id="people" type="number" min="1" step="1" placeholder="1" inputmode="numeric" required>
+        </label>
+
+        <div class="form-actions">
+          <button id="resetBtn" type="button" class="btn secondary">Reset</button>
+        </div>
+      </form>
+
+      <aside class="results" aria-live="polite">
+        <div class="result-row">
+          <div class="label">Tip amount <span class="muted">/ person</span></div>
+          <div id="tipPerPerson" class="value">₹0.00</div>
+        </div>
+        <div class="result-row">
+          <div class="label">Total <span class="muted">/ person</span></div>
+          <div id="totalPerPerson" class="value">₹0.00</div>
+        </div>
+
+        <div id="error" class="error" aria-live="assertive"></div>
+      </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
