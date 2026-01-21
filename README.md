@@ -1,4 +1,4 @@
-# 💰 Tip Calculator
+#  Tip Calculator
 
 A simple and responsive **Tip Calculator**  
 This project helps users quickly calculate the tip amount and total bill based on the bill value and selected tip percentage.
@@ -9,7 +9,7 @@ This project helps users quickly calculate the tip amount and total bill based o
 (https://tip-calculator-web-js.vercel.app/)
 ---
 
-## 🚀 Features
+##  Features
 
 - Enter bill amount
 - Select or input tip percentage
@@ -19,7 +19,7 @@ This project helps users quickly calculate the tip amount and total bill based o
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **HTML** 
 - **CSS**  
