@@ -6,7 +6,7 @@ This project helps users quickly calculate the tip amount and total bill based o
 ---
 
 ## Live Preview:
-(https://tip-calculator-web-js.vercel.app/)
+(https://tip-calculator-web-cs.vercel.app/)
 ---
 
 ##  Features
